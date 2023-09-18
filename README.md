@@ -8,9 +8,8 @@
 <img src="https://github.com/falberthen/pokegraph/blob/master/src/pokegraph.spa/src/assets/pokegraph-logo.png?raw=true"/>
 </p>
 
-Pokégraph is my showcase of building a GraphQL-based API with .NET 7, consumed by a very lightweight SPA built with Vue 3 (composition API) and Apollo.
-
-It comes with a SQLite database loaded with 151 monsters but also allows you to perform queries for listing and mutations for adding or updating the existing ones.
+Pokégraph is my showcase of building a GraphQL-based API with .NET 7, front-ended by a very lightweight SPA built with Vue 3 (composition API) and Apollo.
+It comes with an SQLite database loaded with 151 monsters but also allows you to perform queries for listing and mutations for adding or updating the existing ones.
 
 <p>
 	Pokémon is © 1995-present Nintendo, The Pokémon Company, Game Freak, Creatures Inc.
@@ -20,7 +19,6 @@ It comes with a SQLite database loaded with 151 monsters but also allows you to 
 <br>
 
 ## Screenshots
-
 <img src="https://github.com/falberthen/pokegraph/blob/master/src/pokegraph.spa/images/pokegraph.gif" target="_blank"/>
 
 <img src="https://github.com/falberthen/pokegraph/blob/master/src/pokegraph.spa/images/pokegraph-search.gif" target="_blank"/>
@@ -34,7 +32,7 @@ It comes with a SQLite database loaded with 151 monsters but also allows you to 
 <br/>
 
 ## Architecture 
-    
+
 ### Domain
 This is where the domain models and business logic are defined. You may understand a bit more about the Pokémon domain by reading the code and understanding how the smaller pieces compose the aggregate.
 <br/>
@@ -64,12 +62,12 @@ Backend
 <br>
 Frontend
 <ul>
-	<li>
-		<a href='https://vuejs.org/' target="_blank">Vue 3</a> and <a href='http://www.typescriptlang.org/' target="_blank">TypeScript</a> and <a href='https://apollo.vuejs.org/' target="_blank">Vue Apollo</a>
-	</li>
+	<li><a href='https://vuejs.org/' target="_blank">Vue 3</a> and <a href='http://www.typescriptlang.org/' target="_blank">TypeScript</a></li>
+	<li><a href='https://apollo.vuejs.org/' target="_blank">Vue Apollo</a></li>
+	<li><a href='https://www.npmjs.com/package/vue-toast-notification/' target="_blank">Toast for Vue</a></li>
 </ul>
 
-<br>
+<br/>
 
 
 ## What do you need to run it
