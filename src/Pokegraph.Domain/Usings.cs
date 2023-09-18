@@ -1,0 +1,1 @@
+﻿global using Pokegraph.Domain.SeedWork;

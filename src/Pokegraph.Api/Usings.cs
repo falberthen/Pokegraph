@@ -1,0 +1,11 @@
+﻿global using AutoMapper;
+global using Pokegraph.Api.ViewModels;
+global using HotChocolate.Subscriptions;
+global using Pokegraph.Domain.SeedWork;
+global using Pokegraph.Domain.Pokemon;
+global using Microsoft.EntityFrameworkCore;
+global using Pokegraph.Api.GraphQL;
+global using Pokegraph.Api.Automapper;
+global using Pokegraph.Api.DomainServices;
+global using Pokegraph.Infrastructure.Persistence.Repositories;
+global using Pokegraph.Infrastructure.Persistence;

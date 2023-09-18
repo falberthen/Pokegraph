@@ -1,0 +1,150 @@
+﻿------------------------ Queries
+
+query {
+  listPokemon {
+    number 
+    name
+    primaryType
+    secondaryType
+    catchRate
+    isLegendary
+    evolvesTo {
+      number
+      name
+    }
+    evolvesFrom {
+      number
+      name
+    }
+    genderRatio {
+      femaleRatio
+      maleRatio
+    }
+    physicalAttributes {
+      height
+      weigth
+    }
+    baseStats {
+      hp
+      attack
+      defense
+      specialAttack
+      specialDefense
+      speed
+    }
+    avatar
+  }
+}
+
+query {
+  pokemonByNumber(number:3){
+    number 
+    name
+    primaryType
+    secondaryType
+    catchRate
+    isLegendary
+    evolvesTo {
+      number
+      name
+    }
+    evolvesFrom {
+      number
+      name
+    }
+    genderRatio {
+      femaleRatio
+      maleRatio
+    }
+    physicalAttributes {
+      height
+      weigth
+    }
+    baseStats {
+      hp
+      attack
+      defense
+      specialAttack
+      specialDefense
+      speed
+    }
+    avatar
+  }
+}
+
+------------------------ Mutations
+mutation {
+  insertPokemon(
+    input: {
+      inputData: {
+        number: 172
+        name: "Pichu",
+        primaryType: "Electric",
+        secondaryType: "Electric",
+        height: 1.2,
+        weigth:5.7,
+        maleRatio:50
+        femaleRatio:50,
+        catchRate:10,
+        evolvesToNumber:25
+        isLegendary:false,
+        avatar: "https://img.pokemondb.net/sprites/home/normal/pichu.png"
+      }
+    }
+  ) 
+  {
+    pokemonViewModel {
+      number
+      name
+      primaryType,
+      secondaryType
+      avatar
+    }      
+  }
+}
+
+mutation {
+  updatePokemon(
+    input: {
+      inputData: {
+        number: 26
+        name: "Alolan Raichu",
+        primaryType: "Electric",
+        secondaryType: "Psychic",
+        height: 0.7,
+        weigth: 21,
+        isLegendary:false,
+        avatar: "https://img.pokemondb.net/sprites/home/normal/raichu-alolan.png"
+      }
+    }
+  ) 
+  {
+    pokemonViewModel {
+      number
+      name
+      primaryType,
+      secondaryType
+      avatar
+    }      
+  }
+}
+
+------------------------ Subscriptions
+
+subscription{
+  onListedPokemon
+}
+
+subscription{
+  onInsertedPokemon{
+    number
+    name
+  }
+}
+
+subscription{
+  onUpdatedPokemon{
+    number
+    name
+  }
+}
